@@ -1,28 +1,31 @@
 import { MotionConfig } from "motion/react";
 import { Contact, Footer } from "./sections/Contact";
-import { Experience, OrgBand } from "./sections/Experience";
+import { Foundations } from "./sections/Foundations";
 import { Header } from "./sections/Header";
-import { Hero } from "./sections/Hero";
+import { Hero, KeywordBand } from "./sections/Hero";
 import { Impact } from "./sections/Impact";
-import { ProfileBento } from "./sections/Profile";
+import { Journey } from "./sections/Journey";
+import { Recognition } from "./sections/Recognition";
 
 export default function App() {
   return (
     <MotionConfig reducedMotion="user">
-      <div className="min-h-dvh overflow-x-clip bg-mist text-ink">
+      <div className="relative min-h-dvh overflow-x-clip bg-night text-ivory">
         <a
           href="#main"
-          className="sr-only rounded-full bg-ink px-4 py-2 text-[14px] font-semibold text-white focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50"
+          className="sr-only rounded-full bg-ivory px-4 py-2 text-[14px] font-semibold text-night focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[60]"
         >
           Skip to content
         </a>
+        <div className="grain pointer-events-none fixed inset-0 z-[70] opacity-[0.05] mix-blend-overlay" aria-hidden />
         <Header />
         <main id="main">
           <Hero />
-          <OrgBand />
+          <KeywordBand />
           <Impact />
-          <Experience />
-          <ProfileBento />
+          <Journey />
+          <Recognition />
+          <Foundations />
           <Contact />
         </main>
         <Footer />
